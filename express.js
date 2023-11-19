@@ -41,13 +41,15 @@ api.all("/addtask", (req, res, next) => {
 });
 
 api.get("/", async (req, res) => {
+  console.log("get /");
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Content-Type", "application/json");
   try {
+    console.log("try /");
     const tasks = await getTasks();
     res.status(200).json(tasks);
   } catch (error) {
-    res.status(500).json({ error: "Błąd pobierania zadań: " + error });
+    res.status(500).json({ error: "Błąd pobierania zadań: " + error.message });
   }
 });
 
