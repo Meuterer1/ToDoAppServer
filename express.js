@@ -27,7 +27,7 @@ api.all("/addtask", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Content-Type", "application/json");
 
-  const taskData = req.body;
+  const taskData = res.data;
 
   AddToDataBase(taskData)
     .then(() => {
