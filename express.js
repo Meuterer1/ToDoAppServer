@@ -17,7 +17,7 @@ const port = process.env.PORT || 3001;
 // };
 
 const api = express();
-// api.use(cors());
+api.use(cors());
 //api.use(cors(corsOptions));
 api.use(bodyParser.json());
 
