@@ -1,7 +1,7 @@
 {
+  "main": "express.js",
   "scripts": {
-    "start": "node express.js",
-    "build": "npm install && npm start"
+    "start": "node express.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
