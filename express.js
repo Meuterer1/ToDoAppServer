@@ -10,15 +10,15 @@ const path = require("path");
 
 const port = process.env.PORT || 8080;
 
-const corsOptions = {
-  origin: "https://verdant-daifuku-5168ae.netlify.app/",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true,
-};
+// const corsOptions = {
+//   origin: "https://verdant-daifuku-5168ae.netlify.app/",
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   credentials: true,
+// };
 
 const api = express();
-//api.use(cors());
-api.use(cors(corsOptions));
+// api.use(cors());
+//api.use(cors(corsOptions));
 api.use(bodyParser.json());
 
 api.use(express.static(path.join(__dirname, "../client/build")));
@@ -93,7 +93,7 @@ api.listen(port, () => {
   console.log(`Server działa na porcie ${port}`);
 });
 
-api.use(express.static(path.join(__dirname, "../client/build")));
+//api.use(express.static(path.join(__dirname, "../client/build")));
 
 // api.use("/.netlify/api_node/express", router);
 // module.exports.handler = serverless(api);
