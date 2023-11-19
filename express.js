@@ -8,7 +8,7 @@ const updateTask = require("./updateTask");
 const { ObjectId } = require("mongodb");
 const path = require("path");
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3001;
 
 // const corsOptions = {
 //   origin: "https://verdant-daifuku-5168ae.netlify.app/",
@@ -21,7 +21,7 @@ const api = express();
 //api.use(cors(corsOptions));
 api.use(bodyParser.json());
 
-api.use(express.static(path.join(__dirname, "../client/build")));
+//api.use(express.static(path.join(__dirname, "../client/build")));
 
 api.all("/addtask", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
