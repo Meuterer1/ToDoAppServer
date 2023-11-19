@@ -23,7 +23,7 @@ api.use(bodyParser.json());
 
 //api.use(express.static(path.join(__dirname, "../client/build")));
 
-api.all("/addtask", (req, res, next) => {
+api.post("/addtask", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Content-Type", "application/json");
 
