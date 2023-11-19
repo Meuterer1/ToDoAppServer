@@ -3,7 +3,13 @@ require("dotenv").config();
 const mongo = require("mongodb");
 const MongoClient = mongo.MongoClient;
 const database = "todo";
-
+console.log(
+  "getTasks up: ",
+  "database: ",
+  database,
+  "mongoClient: ",
+  MongoClient
+);
 module.exports = async function getTasks() {
   const url = process.env.MONGODB_URL;
   const client = new MongoClient(url);
