@@ -8,7 +8,7 @@ const updateTask = require("./updateTask");
 const { ObjectId } = require("mongodb");
 const path = require("path");
 
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 8080;
 
 const corsOptions = {
   origin: "https://verdant-daifuku-5168ae.netlify.app/",
