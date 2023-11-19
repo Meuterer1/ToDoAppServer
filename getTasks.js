@@ -11,8 +11,11 @@ console.log(
   MongoClient
 );
 module.exports = async function getTasks() {
+  console.log("pierwsze wejscie do getTasks");
   const url = process.env.MONGODB_URL;
+  console.log("url: ", url);
   const client = new MongoClient(url);
+  console.log("client: ", client);
 
   console.log("get tasks");
   try {
