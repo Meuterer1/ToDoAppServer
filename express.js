@@ -11,7 +11,7 @@ const path = require("path");
 const port = process.env.PORT || 80;
 
 const corsOptions = {
-  origin: "https://bespoke-snickerdoodle-612b54.netlify.app/", // Zmień na adres swojej aplikacji React
+  origin: "https://verdant-daifuku-5168ae.netlify.app/",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
