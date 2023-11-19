@@ -28,6 +28,7 @@ api.all("/addtask", (req, res, next) => {
   res.header("Content-Type", "application/json");
 
   const taskData = res.data;
+  console.log("res.data: ", res.data, "req.body: ", req.body);
 
   AddToDataBase(taskData)
     .then(() => {
