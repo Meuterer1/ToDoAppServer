@@ -27,7 +27,7 @@ api.post("/addtask", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Content-Type", "application/json");
 
-  const taskData = res.data;
+  const taskData = req.body;
   console.log("res.data: ", res.data, "req.body: ", req.body);
 
   AddToDataBase(taskData)
